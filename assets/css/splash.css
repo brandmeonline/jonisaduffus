@@ -1,0 +1,120 @@
+/* =============================================================
+   Brannan Shore — Subdomain "Opening Soon" splash pages
+   Shared base; per-location theming via body[data-theme].
+   ============================================================= */
+
+:root {
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* themed backgrounds */
+body[data-theme="outer-banks"] {
+  background: linear-gradient(180deg, #0a2540 0%, #14668a 50%, #2f9fae 100%);
+}
+body[data-theme="wildwood"] {
+  background: linear-gradient(180deg, #2a1245 0%, #7b3a86 45%, #ef6f91 100%);
+}
+
+.scene { position: fixed; inset: 0; z-index: 0; }
+.scene svg { width: 100%; height: 100%; }
+
+.veil {
+  position: fixed; inset: 0; z-index: 1;
+  background: radial-gradient(circle at 50% 30%, rgba(0,0,0,0) 0%, rgba(6,12,28,0.45) 100%);
+}
+
+.wrap {
+  position: relative; z-index: 3;
+  width: min(92vw, 680px);
+  padding: 40px 24px;
+  animation: rise 1s var(--ease) both;
+}
+@keyframes rise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+
+.home-link {
+  position: fixed; top: 24px; left: 28px; z-index: 5;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  color: rgba(255,255,255,0.9); font-weight: 700; font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+.home-link svg { transition: transform 0.3s var(--ease); }
+.home-link:hover svg { transform: translateX(-4px); }
+.home-link, .home-link:visited { text-decoration: none; }
+
+.kicker {
+  text-transform: uppercase; letter-spacing: 0.42em;
+  font-size: 0.74rem; font-weight: 700;
+  color: rgba(255,255,255,0.82); margin-bottom: 1.4rem;
+}
+.brandline {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--serif); font-size: 1.1rem; color: rgba(255,255,255,0.85);
+  margin-bottom: 0.8rem; letter-spacing: 0.04em;
+}
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 11vw, 6.5rem);
+  font-weight: 600; line-height: 0.98; margin: 0 0 1rem;
+  text-shadow: 0 10px 50px rgba(0,0,0,0.3);
+}
+h1 em { font-style: italic; color: #ffe6b0; }
+.tagline {
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  color: rgba(255,255,255,0.9); max-width: 46ch; margin: 0 auto 2.2rem;
+  line-height: 1.6;
+}
+
+/* countdown */
+.count { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2.4rem; flex-wrap: wrap; }
+.count .unit {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(8px); border-radius: 16px;
+  min-width: 84px; padding: 16px 10px;
+}
+.count .n { font-family: var(--serif); font-size: 2.4rem; line-height: 1; display: block; }
+.count .l { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.18em; color: rgba(255,255,255,0.7); margin-top: 6px; }
+
+/* signup */
+.signup {
+  display: flex; gap: 0.5rem; max-width: 440px; margin: 0 auto;
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.26);
+  padding: 7px; border-radius: 999px;
+}
+.signup input {
+  flex: 1; background: none; border: none; outline: none; color: #fff;
+  padding: 0 1.1rem; font-family: var(--sans); font-size: 0.95rem;
+}
+.signup input::placeholder { color: rgba(255,255,255,0.65); }
+.signup button {
+  border: none; cursor: pointer; border-radius: 999px;
+  padding: 0.85em 1.5em; font-family: var(--sans); font-weight: 700; font-size: 0.9rem;
+  color: #0a2540; background: #ffe6b0;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.signup button:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(0,0,0,0.25); }
+body[data-theme="wildwood"] .signup button { background: #ffe6b0; color: #6b2a6e; }
+.note { font-size: 0.82rem; color: rgba(255,255,255,0.7); margin-top: 1.1rem; min-height: 1.2em; }
+
+.foot {
+  position: fixed; bottom: 22px; left: 0; right: 0; z-index: 4;
+  font-size: 0.78rem; color: rgba(255,255,255,0.6); letter-spacing: 0.04em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; }
+}

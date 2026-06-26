@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wildwood · Opening Soon — Brannan Shore</title>
+  <meta name="description" content="The Brannan Shore Wildwood collection is opening soon. Neon boardwalks, doo-wop motels, and the widest free beach on the Jersey shore." />
+  <meta name="theme-color" content="#2a1245" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='12' r='8' fill='%23ff6f91'/%3E%3Cpath fill='%23ffe6b0' d='M2 23c3 0 3 2 6 2s3-2 6-2 3 2 6 2 3-2 6-2v6H2z'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/splash.css" />
+  <style>
+    /* extra neon flair for Wildwood */
+    body[data-theme="wildwood"] h1 { text-shadow: 0 0 24px rgba(255,111,145,0.55), 0 10px 50px rgba(0,0,0,0.35); }
+    body[data-theme="wildwood"] h1 em { color: #6ff0ff; }
+    .neon-flicker { animation: flick 4.5s infinite; }
+    @keyframes flick { 0%,18%,22%,25%,53%,57%,100%{ opacity:1 } 20%,24%,55%{ opacity:0.55 } }
+    @media (prefers-reduced-motion: reduce){ .neon-flicker{ animation:none } }
+  </style>
+</head>
+<body data-theme="wildwood">
+
+  <div class="scene" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1245"/><stop offset="0.55" stop-color="#7b3a86"/><stop offset="1" stop-color="#ef6f91"/></linearGradient>
+        <radialGradient id="sun2" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ffe9a8"/><stop offset="1" stop-color="rgba(255,233,168,0)"/></radialGradient>
+      </defs>
+      <rect width="1440" height="900" fill="url(#dusk)"/>
+      <circle cx="720" cy="420" r="260" fill="url(#sun2)"/>
+      <circle cx="720" cy="420" r="110" fill="#ffd98c" opacity="0.85"/>
+      <!-- stars -->
+      <g fill="#fff" opacity="0.8"><circle cx="180" cy="120" r="2"/><circle cx="320" cy="80" r="1.5"/><circle cx="520" cy="150" r="2"/><circle cx="980" cy="100" r="1.6"/><circle cx="1180" cy="160" r="2"/><circle cx="1320" cy="90" r="1.5"/></g>
+      <!-- ferris wheel -->
+      <g transform="translate(1080 430)" stroke="#6ff0ff" stroke-width="3" fill="none" class="neon-flicker">
+        <circle cx="0" cy="0" r="150" stroke="#6ff0ff"/>
+        <circle cx="0" cy="0" r="14" fill="#6ff0ff" stroke="none"/>
+        <g><path d="M0 0 L0 -150M0 0 L0 150M0 0 L150 0M0 0 L-150 0M0 0 L106 -106M0 0 L-106 106M0 0 L106 106M0 0 L-106 -106"/></g>
+        <g fill="#ff6f91" stroke="none"><circle cx="0" cy="-150" r="13"/><circle cx="0" cy="150" r="13"/><circle cx="150" cy="0" r="13"/><circle cx="-150" cy="0" r="13"/><circle cx="106" cy="-106" r="13"/><circle cx="-106" cy="106" r="13"/><circle cx="106" cy="106" r="13"/><circle cx="-106" cy="-106" r="13"/></g>
+        <path d="M-150 150 L0 0 L150 150" stroke="#3a1f4a" stroke-width="6"/>
+      </g>
+      <!-- boardwalk -->
+      <rect x="0" y="720" width="1440" height="180" fill="#b98a4a"/>
+      <g stroke="#9a6f37" stroke-width="3">
+        <path d="M80 720V900M200 720V900M320 720V900M440 720V900M560 720V900M680 720V900M800 720V900M920 720V900M1040 720V900M1160 720V900M1280 720V900M1380 720V900"/>
+      </g>
+      <!-- string lights -->
+      <path d="M0 700 Q360 740 720 700 T1440 700" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+      <g fill="#ffe6b0"><circle cx="120" cy="717" r="4"/><circle cx="300" cy="724" r="4"/><circle cx="480" cy="722" r="4"/><circle cx="660" cy="710" r="4"/><circle cx="840" cy="710" r="4"/><circle cx="1020" cy="720" r="4"/><circle cx="1200" cy="724" r="4"/><circle cx="1360" cy="714" r="4"/></g>
+    </svg>
+  </div>
+  <div class="veil" aria-hidden="true"></div>
+
+  <a class="home-link" href="https://brannanshore.com">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>
+    Brannan Shore
+  </a>
+
+  <main class="wrap">
+    <div class="brandline">
+      <svg width="22" height="22" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="15" r="9" fill="#ff6f91"/><path d="M4 28c4 0 4 2.5 8 2.5S16 28 20 28s4 2.5 8 2.5 4-2.5 8-2.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+      Brannan Shore
+    </div>
+    <p class="kicker">New Jersey · Opening Summer 2026</p>
+    <h1><em>Wild</em>wood</h1>
+    <p class="tagline">Neon boardwalks, doo-wop motels, and the widest free beach on the Jersey shore. Our Wildwood collection is warming up the lights — claim your spot in line.</p>
+
+    <div class="count" data-countdown="2026-07-22T09:00:00">
+      <div class="unit"><span class="n" data-d>00</span><span class="l">Days</span></div>
+      <div class="unit"><span class="n" data-h>00</span><span class="l">Hours</span></div>
+      <div class="unit"><span class="n" data-m>00</span><span class="l">Minutes</span></div>
+      <div class="unit"><span class="n" data-s>00</span><span class="l">Seconds</span></div>
+    </div>
+
+    <form class="signup" data-signup>
+      <input type="email" placeholder="Get launch access · you@email.com" aria-label="Email" required />
+      <button type="submit">Notify Me</button>
+    </form>
+    <p class="note">Early guests get first pick and founding rates.</p>
+  </main>
+
+  <div class="foot">wildwood.brannanshore.com · © <span id="yr"></span> Brannan Shore</div>
+
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/splash.js"></script>
+</body>
+</html>
