@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "outerbanks.brannanshore.com" }],
+      "destination": "/outer-banks/index.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "wildwood.brannanshore.com" }],
+      "destination": "/wildwood/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}

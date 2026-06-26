@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outer Banks · Opening Soon — Brannan Shore</title>
+  <meta name="description" content="The Brannan Shore Outer Banks collection is opening soon. Wild dunes, lighthouse mornings, and barrier-island homes on North Carolina's untamed coast." />
+  <meta name="theme-color" content="#0a2540" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='11' r='7' fill='%23e3b23c'/%3E%3Cpath fill='%231d7c8e' d='M2 22c3 0 3 2 6 2s3-2 6-2 3 2 6 2 3-2 6-2v6H2z'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/splash.css" />
+</head>
+<body data-theme="outer-banks">
+
+  <div class="scene" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f9fae"/><stop offset="1" stop-color="#0f5e74"/></linearGradient>
+        <radialGradient id="moon" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#fff6dc"/><stop offset="1" stop-color="rgba(255,246,220,0)"/></radialGradient>
+      </defs>
+      <circle cx="1120" cy="180" r="180" fill="url(#moon)"/>
+      <circle cx="1120" cy="180" r="62" fill="#fff1cf"/>
+      <!-- water -->
+      <path d="M0 600 Q360 580 720 600 T1440 600 V900 H0Z" fill="url(#sea)"/>
+      <path d="M0 640 Q240 624 480 640 T960 640 T1440 640" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3">
+        <animate attributeName="d" dur="8s" repeatCount="indefinite"
+          values="M0 640 Q240 624 480 640 T960 640 T1440 640;M0 640 Q240 656 480 640 T960 640 T1440 640;M0 640 Q240 624 480 640 T960 640 T1440 640"/>
+      </path>
+      <!-- beach -->
+      <path d="M0 740 Q420 712 860 736 T1440 740 V900 H0Z" fill="#e7d2a0"/>
+      <!-- lighthouse -->
+      <g transform="translate(280 300)">
+        <path d="M-26 440 L-16 0 H16 L26 440 Z" fill="#f7f3ea"/>
+        <path d="M-19 70 L-15 35 H15 L19 70 Z" fill="#1f2d3a"/>
+        <path d="M-22 150 L-18 115 H18 L22 150 Z" fill="#1f2d3a"/>
+        <path d="M-25 230 L-21 195 H21 L25 230 Z" fill="#1f2d3a"/>
+        <rect x="-16" y="-26" width="32" height="26" rx="3" fill="#3a5566"/>
+        <circle cx="0" cy="-13" r="8" fill="#ffe49b"/>
+        <path d="M8 -13 L320 -120 L320 -60 Z" fill="rgba(255,228,155,0.18)"/>
+      </g>
+      <!-- dune grass -->
+      <g stroke="#2f6f3a" stroke-width="3" stroke-linecap="round" opacity="0.7">
+        <path d="M1180 770 q-6 -50 0 -86"/><path d="M1196 770 q4 -52 16 -82"/><path d="M1212 770 q12 -44 30 -68"/>
+        <path d="M120 800 q-6 -50 0 -84"/><path d="M138 800 q6 -50 18 -78"/>
+      </g>
+    </svg>
+  </div>
+  <div class="veil" aria-hidden="true"></div>
+
+  <a class="home-link" href="https://brannanshore.com">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>
+    Brannan Shore
+  </a>
+
+  <main class="wrap">
+    <div class="brandline">
+      <svg width="22" height="22" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="15" r="9" fill="#e3b23c"/><path d="M4 28c4 0 4 2.5 8 2.5S16 28 20 28s4 2.5 8 2.5 4-2.5 8-2.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+      Brannan Shore
+    </div>
+    <p class="kicker">North Carolina · Opening Summer 2026</p>
+    <h1>The <em>Outer</em><br/>Banks</h1>
+    <p class="tagline">Wild dunes, lighthouse mornings, and 120 miles of barrier-island sky. Our Outer Banks collection is almost ready — be the first through the door.</p>
+
+    <div class="count" data-countdown="2026-07-15T09:00:00">
+      <div class="unit"><span class="n" data-d>00</span><span class="l">Days</span></div>
+      <div class="unit"><span class="n" data-h>00</span><span class="l">Hours</span></div>
+      <div class="unit"><span class="n" data-m>00</span><span class="l">Minutes</span></div>
+      <div class="unit"><span class="n" data-s>00</span><span class="l">Seconds</span></div>
+    </div>
+
+    <form class="signup" data-signup>
+      <input type="email" placeholder="Get launch access · you@email.com" aria-label="Email" required />
+      <button type="submit">Notify Me</button>
+    </form>
+    <p class="note">Early guests get first pick and founding rates.</p>
+  </main>
+
+  <div class="foot">outerbanks.brannanshore.com · © <span id="yr"></span> Brannan Shore</div>
+
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/splash.js"></script>
+</body>
+</html>
